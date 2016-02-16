@@ -29,12 +29,5 @@
             vm.find = function (movie_title) {
                 return _.find(vm.movies, {title: movie_title});
             };
-
-            vm.getMoviePoster = function (title) {
-                $.getJSON("http://www.omdbapi.com/?t="+title, function(data) {
-                    console.log(data["Poster"]);
-                    return data["Poster"];
-                });
-            };
         });
 }());
