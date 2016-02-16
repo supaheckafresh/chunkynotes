@@ -13,25 +13,25 @@
              * State provider
              */
             $stateProvider
-                .state('movies', {
-                    url: '/movies',
-                    templateUrl: 'build/partials/movies/movies.html',
-                    controller: 'MoviesController',
-                    controllerAs: 'movies',
+                .state('notes', {
+                    url: '/notes',
+                    templateUrl: 'build/partials/movies/app.html',
+                    controller: 'NotesController',
+                    controllerAs: 'notes',
                     resolve: {
-                        movies: function (MoviesService) {
-                            return MoviesService.getMovies();
+                        movies: function (NotesService) {
+                            return NotesService.getNotes();
                         }
                     }
                 })
-                .state('movies.movie', {
-                    url: '/:movie_title',
-                    templateUrl: 'build/partials/movies/movie.html',
-                    controller: 'MovieController',
-                    controllerAs: 'movie',
+                .state('notes.note', {
+                    url: '/:note_title',
+                    templateUrl: 'build/partials/notes/note.html',
+                    controller: 'NoteController',
+                    controllerAs: 'note',
                     resolve: {
-                        movie: function (movies, MoviesService, $stateParams) {
-                            return MoviesService.find($stateParams.movie_title);
+                        movie: function (notes, NotesService, $stateParams) {
+                            return NotesService.find($stateParams.note_title);
                         }
                     }
                 });
