@@ -3,10 +3,10 @@
     'use strict';
 
     angular.module('app')
-        .controller('MovieController', function (movie) {
+        .controller('NoteController', function (note) {
             var vm = this;
 
-            vm.movie = movie;
+            vm.note = note;
         });
 
 }());

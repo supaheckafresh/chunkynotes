@@ -7,7 +7,7 @@
             /**
              * Default state
              */
-            $urlRouterProvider.otherwise('/movies');
+            $urlRouterProvider.otherwise('/notes');
 
             /**
              * State provider
@@ -19,7 +19,7 @@
                     controller: 'NotesController',
                     controllerAs: 'notes',
                     resolve: {
-                        movies: function (NotesService) {
+                        notes: function (NotesService) {
                             return NotesService.getNotes();
                         }
                     }
@@ -30,7 +30,7 @@
                     controller: 'NoteController',
                     controllerAs: 'note',
                     resolve: {
-                        movie: function (notes, NotesService, $stateParams) {
+                        note: function (notes, NotesService, $stateParams) {
                             return NotesService.find($stateParams.note_title);
                         }
                     }

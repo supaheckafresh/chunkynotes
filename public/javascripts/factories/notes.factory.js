@@ -3,7 +3,7 @@
     'use strict';
 
     angular.module('app')
-        .factory('Movie', function () {
+        .factory('Note', function () {
             function Movie(data) {
                 _.merge(this, {
                     title: '',
@@ -15,7 +15,7 @@
                 }, data || {});
             }
 
-            Movie.prototype = {
+            Note.prototype = {
                 shortDesc: function () {
                     return this.description.substr(0, 25).replace(/\s$/, '') + '...';
                 },
@@ -31,6 +31,6 @@
                 }
             };
 
-            return Movie;
+            return Note;
         });
 }());

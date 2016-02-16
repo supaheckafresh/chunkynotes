@@ -7,11 +7,6 @@
         .controller('NavController', function () {
             var vm = this;
 
-            vm.views = {
-                movies: 'Home',
-                contact: 'Contact'
-            };
-
         });
 
 }());

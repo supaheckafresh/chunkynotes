@@ -1,0 +1,28 @@
+
+<div data-ui-view>
+    <h1 class="app-title">Check out these Notes</h1>
+    <ul class="list">
+        <li data-ng-repeat="note in notes.notes" class="note row">
+            <span><i class="fa fa-film fa-2x"></i></span>
+            <h3 class="note-title"><a data-ui-sref="notes.note ({ note_title: note.title })">{{ note.title | titlecase }}</a></h3>
+
+            <!-- checkedIn status display -->
+            <span class="available" data-ng-if="note.checkedIn == true" data-ng-click="note.checkInOut()"> | <i class="fa fa-check-square"></i>
+                available
+            </span>
+
+            <span class="checked-out" data-ng-if="note.checkedIn == false" data-ng-click="note.checkInOut()"> | <i class="fa fa-times-circle"></i>
+                currently checked out
+            </span>
+
+
+            <div class="note-details">
+                <span><i class="fa fa-clock-o fa-1x"></i>{{ note.runTime | runningHours }}</span>
+                <span><i class="fa fa-calendar fa-1x"></i>{{ note.releaseYear}}</span>
+                <span>
+                    <i class="fa fa-smile-o fa-1x"></i><i class="fa fa-frown-o fa-1x"></i>{{ note.genre | titlecase }}
+                </span>
+            </div>
+        </li>
+    </ul>
+</div>
