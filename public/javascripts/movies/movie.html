@@ -1,0 +1,22 @@
+
+<div data-ui-view class="movie row">
+    <h1 class="movie-title">{{ movie.movie.title | titlecase }}</h1>
+
+    <!-- checkedIn status display -->
+    <span class="available" data-ng-if="movie.movie.checkedIn" data-ng-click="movie.movie.checkInOut()"> | <i class="fa fa-check-square"></i>
+        <a href="#">available</a>
+    </span>
+
+    <span class="checked-out" data-ng-if="!movie.movie.checkedIn" data-ng-click="movie.movie.checkInOut()"> | <i class="fa fa-times-circle"></i>
+        currently checked out
+    </span>
+
+    <div class="movie-details">
+        <span><i class="fa fa-clock-o fa-1x"></i>{{ movie.movie.runTime | runningHours }}</span>
+        <span><i class="fa fa-calendar fa-1x"></i>{{ movie.movie.releaseYear}}</span>
+        <span>
+            <i class="fa fa-smile-o fa-1x"></i><i class="fa fa-frown-o fa-1x"></i>{{ movie.movie.genre | titlecase }}
+        </span>
+    </div>
+    <p class="movie-description">{{ movie.movie.description }}</p>
+</div>

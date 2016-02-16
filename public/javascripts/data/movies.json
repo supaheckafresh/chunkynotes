@@ -1,0 +1,72 @@
+[
+  {
+    "title": "star wars",
+    "runTime": "121",
+    "releaseYear": "1977",
+    "genre": "drama",
+    "description": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a wookiee and two droids to save the universe from the Empire's world-destroying battle-station, while also attempting to rescue Princess Leia from the evil Darth Vader."
+  },
+  {
+    "title": "empire strikes back",
+    "runTime": "124",
+    "releaseYear": "1980",
+    "genre": "drama",
+    "description": "After the rebels have been brutally overpowered by the Empire on their newly established base, Luke Skywalker takes advanced Jedi training with Master Yoda, while his friends are pursued by Darth Vader as part of his plan to capture Luke."
+  },
+  {
+    "title": "return of the jedi",
+    "runTime": "134",
+    "releaseYear": "1983",
+    "genre": "drama",
+    "description": "After rescuing Han Solo from the palace of Jabba the Hutt, the rebels attempt to destroy the second Death Star, while Luke struggles to make Vader return from the dark side of the Force."
+  },
+  {
+    "title": "spaceballs",
+    "runTime": "96",
+    "releaseYear": "1987",
+    "genre": "comedy",
+    "description": "Planet Spaceball's President Skroob sends Lord Dark Helmet to steal Planet Druidia's abundant supply of air to replenish their own, and only Lone Starr can stop them."
+  },
+  {
+    "title": "monty python and the holy grail",
+    "runTime": "91",
+    "releaseYear": "1975",
+    "genre": "comedy",
+    "description": "King Arthur and his knights embark on a low-budget search for the Grail, encountering many very silly obstacles."
+  },
+  {
+    "title": "time bandits",
+    "runTime": "110",
+    "releaseYear": "1981",
+    "genre": "action",
+    "description": "A young boy accidentally joins a band of dwarves as they jump from era to era looking for treasure to steal."
+  },
+  {
+    "title": "robin hood men in tights",
+    "runTime": "104",
+    "releaseYear": "1993",
+    "genre": "comedy",
+    "description": "A spoof of Robin Hood in general and Robin Hood: Prince of Thieves (1991) in particular."
+  },
+  {
+    "title": "the princess bride",
+    "runTime": "98",
+    "releaseYear": "1987",
+    "genre": "comedy",
+    "description": "While home sick in bed, a young boy's grandfather reads him a story called The Princess Bride."
+  },
+  {
+    "title": "serenity",
+    "runTime": "119",
+    "releaseYear": "2005",
+    "genre": "drama",
+    "description": "The crew of the ship Serenity tries to evade an assassin sent to recapture one of their number who is telepathic."
+  },
+  {
+    "title": "the hitchhiker's guide to the galaxy",
+    "runTime": "109",
+    "releaseYear": "2005",
+    "genre": "comedy",
+    "description": "Mere seconds before the Earth is to be demolished by an alien construction crew, journeyman Arthur Dent is swept off the planet by his friend Ford Prefect, a researcher penning a new edition of \"The Hitchhiker's Guide to the Galaxy.\""
+  }
+]
