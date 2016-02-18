@@ -18,7 +18,6 @@
                     }
                     return this.content;
                 }
-
             };
 
             return Note;
