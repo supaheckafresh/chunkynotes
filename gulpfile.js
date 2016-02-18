@@ -78,7 +78,7 @@ gulp.task('less', function () {
 });
 
 gulp.task('data', function () {
-    gulp.src('./public/javascripts/data/movies.json')
+    gulp.src('./public/javascripts/data/fakenotes.json')
         .pipe(gulp.dest('./build/data/'));
 });
 
