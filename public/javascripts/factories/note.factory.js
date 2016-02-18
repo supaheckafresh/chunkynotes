@@ -14,10 +14,12 @@
 
             Note.prototype = {
                 preview: function () {
-                    if (this.content.length > 40) {
-                        return this.content.substr(0, 40).replace(/\s$/, '') + '...';
+                    if (this.content) {
+                        if (this.content.length > 40) {
+                            return this.content.substr(0, 40).replace(/\s$/, '') + '...';
+                        }
+                        return this.content;
                     }
-                    return this.content;
                 },
 
                 hide: function () {
