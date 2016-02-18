@@ -19,7 +19,7 @@
                 }];
                 NotesService.makeNotes(note);
 
-                vm.noteForm = '';
+                vm.newNote = '';
             };
 
         });
