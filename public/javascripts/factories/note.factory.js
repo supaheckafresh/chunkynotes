@@ -8,7 +8,8 @@
                  _.merge(this, {
                      content: '',
                      date: '',
-                     hidden: false
+                     hidden: false,
+                     editMode: false
                  }, data || {});
             }
 
