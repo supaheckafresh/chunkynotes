@@ -15,6 +15,9 @@ a {
   color: inherit;
 }
 
+.large {
+  display: none;
+}
 
 .nav-area {
   display: block;
@@ -60,12 +63,14 @@ a {
   padding-left: 16px;
 }
 
-ul li:nth-child(even) {
-  background-color: #dddddd;
-}
+ul  {
+  li:nth-child(even) {
+    background-color: #dddddd;
+  }
 
-ul li:nth-child(odd) {
-  background-color: #d4d4d4;
+  li:nth-child(odd) {
+    background-color: #d4d4d4;
+  }
 }
 
 .date {
@@ -76,4 +81,13 @@ ul li:nth-child(odd) {
   position: absolute;
   right: 10px;
   bottom: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .small {
+    display: none;
+  }
+  .large {
+    display: block;
+  }
 }
