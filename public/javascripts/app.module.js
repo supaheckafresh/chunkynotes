@@ -3,7 +3,10 @@
     'use strict';
 
     angular.module('app', ['ui.router', 'ui.bootstrap', 'LocalStorageModule', 'customDirectives', 'customFilters'])
-        .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
+        .config(function ($stateProvider, $urlRouterProvider, localStorageServiceProvider, $httpProvider) {
+
+            localStorageServiceProvider.setPrefix('ls');
+
             /**
              * Default state
              */
@@ -47,10 +50,6 @@
                         }
                     }
                 });
-        })
-
-        .config(['localStorageServiceProvider', function(localStorageServiceProvider){
-            localStorageServiceProvider.setPrefix('chunkydata');
-        }]);
+        });
 }());
 

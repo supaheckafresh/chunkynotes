@@ -18,7 +18,8 @@ gulp.task('js-deps', function () {
         './public/bower_components/lodash/lodash.js',
         './public/bower_components/angular/angular.js',
         './public/bower_components/angular-ui-router/release/angular-ui-router.js',
-        './public/bower_components/angular-bootstrap/ui-bootstrap-tpls.js'
+        './public/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+        './public/bower_components/angular-local-storage/dist/angular-local-storage.js'
     ])
         .pipe(concat('deps.js'))
         .pipe(ngAnnotate())

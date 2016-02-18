@@ -3,10 +3,16 @@
     'use strict';
 
     angular.module('app')
-        .service('NotesService', function (Note, $http) {
+        .service('NotesService', function (Note, $http, localStorageService) {
             var vm = this;
 
-            vm.notes = [];
+            var storedNotes = localStorageService.get('chunkynotes');
+
+            vm.notes = storedNotes || [];
+
+            //vm.$watch('chunkynotes', function () {
+            //    localStorageService.set('chunkynotes', vm.notes);
+            //}, true);
 
             vm.makeNotes = function (data) {
                 _.each(data, function (l) {
