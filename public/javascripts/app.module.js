@@ -25,6 +25,7 @@
                     }
                 })
                 .state('app.note', {
+                    // TODO: use unique ID in url instead of full note_content. Same goes for `app.edit` state.
                     url: '/view/:note_content',
                     templateUrl: 'build/partials/app/notes/note.html',
                     controller: 'NoteController',
