@@ -13,7 +13,10 @@
 
             Note.prototype = {
                 preview: function () {
-                    return this.content.substr(0, 25).replace(/\s$/, '') + '...';
+                    if (this.content.length > 40) {
+                        return this.content.substr(0, 40).replace(/\s$/, '') + '...';
+                    }
+                    return this.content;
                 }
 
             };
