@@ -50,28 +50,30 @@ a {
   border-radius: 4px;
   border: 1px solid white;
   padding: 6px 0 8px 8px;
-  margin-top: 18px;
+  margin-bottom: 16px;
   box-shadow: 5px 5px 9px #888;
+
+  .note-left-buttons {
+    display: none;
+    position: absolute;
+    top: 4px;
+    left: -24px;
+
+    .edit {
+      color: #ffb700;
+    }
+
+    .view {
+      color: #0340ff;
+    }
+  }
 }
 
 .note:hover .note-left-buttons {
   display: block;
 }
 
-.note-left-buttons {
-  display: none;
-  position: absolute;
-  top: 4px;
-  left: -24px;
 
-  .edit {
-    color: #ffb700;
-  }
-
-  .view {
-    color: #0340ff;
-  }
-}
 
 ul  {
   li:nth-child(even) {
