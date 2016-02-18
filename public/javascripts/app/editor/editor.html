@@ -3,7 +3,7 @@
         <div class="input-group">
             <textarea data-ng-model="notes.newNote" rows="12" class="form-control" required></textarea>
             <input type="submit" class="btn btn-success" value="Save">
-            <input class="btn btn-danger" value="Start Over">
+            <input class="btn btn-danger" value="Start Over" data-ng-click="notes.newNote = ''">
         </div>
     </form>
 </div>

@@ -11,7 +11,7 @@
             vm.newNote = '';
 
             vm.addNote = function () {
-                
+
                 var note = [{
                     content: vm.newNote.toString(),
                     date: Date.now()
@@ -20,6 +20,10 @@
 
                 vm.newNote = '';
             };
+
+            vm.deleteNote = function ($event) {
+                console.log($event.currentTarget);
+            }
 
         });
 

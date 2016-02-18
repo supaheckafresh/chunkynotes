@@ -1,10 +1,14 @@
 <div class="notes-list">
 
     <ul>
-        <li class="note" data-ng-repeat="note in notes.notes">
+        <li class="note" data-ng-repeat="note in notes.notes" data-ng-hide="note.hidden">
             <p>{{ note.preview() }}</p>
             <p class="date">{{ note.date | date }}</p>
-            <button type="button" class="delete btn btn-danger">Delete</button>
+            <span class="note-buttons">
+                <button type="button" class="btn btn-info" data-ng-click="note.hide()">Hide</button>
+                <button type="button" class="btn btn-danger" data-ng-click="note.delete()">Delete</button>
+            </span>
+
         </li>
     </ul>
 

@@ -7,7 +7,8 @@
             function Note(data) {
                  _.merge(this, {
                      content: '',
-                     date: ''
+                     date: '',
+                     hidden: false
                  }, data || {});
             }
 
@@ -17,6 +18,10 @@
                         return this.content.substr(0, 40).replace(/\s$/, '') + '...';
                     }
                     return this.content;
+                },
+
+                hide: function () {
+                    this.hidden = true;
                 }
             };
 
