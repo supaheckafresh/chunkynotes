@@ -54,19 +54,23 @@ a {
   box-shadow: 5px 5px 9px #888;
 }
 
-.note-title {
-  margin: 8px;
-  display: inline;
+.note:hover .note-left-buttons {
+  display: block;
 }
 
-.note-contents {
-  font-style: italic;
-  margin-bottom: 16px;
-  background-color: #7cffb8;
-}
+.note-left-buttons {
+  display: none;
+  position: absolute;
+  top: 4px;
+  left: -24px;
 
-.note-contents span {
-  padding-left: 16px;
+  .edit {
+    color: #ffb700;
+  }
+
+  .view {
+    color: #0340ff;
+  }
 }
 
 ul  {

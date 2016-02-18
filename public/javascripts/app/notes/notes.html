@@ -2,7 +2,11 @@
 
     <ul>
         <li class="note" data-ng-repeat="note in notes.notes" data-ng-hide="note.hidden">
-            <p>{{ note.preview() }}</p>
+            <div class="note-left-buttons">
+                <div><i class="edit fa fa-pencil-square fa-2x"></i></div>
+                <div><i class="view fa fa-eye fa-2x"></i></div>
+            </div>
+            <p><a data-ui-sref="notes.note ({ note_content: note.content })">{{ note.preview() }}</a></p>
             <p class="date">{{ note.date | date }}</p>
             <span class="note-buttons">
                 <button type="button" class="btn btn-info" data-ng-click="note.hide()">Hide</button>

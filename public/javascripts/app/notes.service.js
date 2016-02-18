@@ -25,6 +25,10 @@
                     });
             };
 
+            vm.find = function (note_content) {
+                return _.find(vm.notes, {content: note_content});
+            };
+
         });
 
 }());

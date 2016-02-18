@@ -25,13 +25,13 @@
                     }
                 })
                 .state('app.note', {
-                    url: '/:note_title',
+                    url: '/:note_content',
                     templateUrl: 'build/partials/app/note.html',
                     controller: 'NoteController',
                     controllerAs: 'note',
                     resolve: {
                         note: function (notes, NotesService, $stateParams) {
-                            return NotesService.find($stateParams.note_title);
+                            return NotesService.find($stateParams.note_content);
                         }
                     }
                 });
