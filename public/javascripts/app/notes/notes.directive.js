@@ -10,7 +10,7 @@
                     info: '='
                 },
                 templateUrl: 'build/partials/app/notes/notes.html'
-            }
-        })
+            };
+        });
 
 }());
