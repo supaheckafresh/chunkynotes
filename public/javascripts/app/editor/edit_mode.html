@@ -1,14 +1,36 @@
 
 <div class="edit-mode">
-    <form role="form" name="noteForm" data-ng-submit="note.saveChanges()">
+    <form role="form" name="noteForm" data-ng-submit="">
         <div class="input-group">
+
+            <!-- note that we are only using data binding to update (or discard) changes to `note.note.content`.
+                 It seemed that I didn't need to add a method for this. -->
             <textarea rows="11" data-ng-model="note.note.content" class="note-pad form-control" required></textarea>
             <div class="note-buttons">
-                <a data-ui-sref="app">
-                    <input type="submit" class="btn btn-success" value="Save">
+
+                <a data-ui-sref="app" data-ng-show="note.note.content">
+                    <input type="submit"
+                           class="btn btn-success"
+                           value="Save">
+
                     <input class="btn btn-danger" value="Cancel"
                            data-ng-click="note.note.content = note.note.cachedContent">
                 </a>
+
+                <!-- Maybe there is a better way to conditionally disable a data-ui-href? -->
+                <div data-ng-show="!note.note.content">
+                    <input type="submit"
+                           class="btn btn-success"
+                           value="Save"
+                           data-ng-class="{'disabled': !note.note.content}">
+
+                    <a data-ui-sref="app">
+                        <!-- replace `note.note.content` with previous value when cancel button clicked -->
+                        <input class="btn btn-danger" value="Cancel"
+                               data-ng-click="note.note.content = note.note.cachedContent">
+                    </a>
+                </div>
+
             </div>
         </div>
     </form>
