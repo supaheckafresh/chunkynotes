@@ -25,7 +25,7 @@
                     }
                 })
                 .state('app.note', {
-                    url: '/:note_content',
+                    url: '/view/:note_content',
                     templateUrl: 'build/partials/app/notes/note.html',
                     controller: 'NoteController',
                     controllerAs: 'note',
