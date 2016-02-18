@@ -46,7 +46,7 @@
                             return NotesService.find($stateParams.note_content);
                         }
                     }
-                })
+                });
         });
 }());
 
