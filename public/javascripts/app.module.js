@@ -16,7 +16,7 @@
                 .state('movies', {
                     url: '/movies',
                     templateUrl: 'build/partials/movies/movies.html',
-                    controller: 'MoviesController',
+                    controller: 'NotesController',
                     controllerAs: 'movies',
                     resolve: {
                         movies: function (MoviesService) {
