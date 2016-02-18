@@ -2,10 +2,8 @@
 
     'use strict';
 
-    angular.module('app', ['ui.router', 'ui.bootstrap', 'LocalStorageModule', 'customDirectives', 'customFilters'])
-        .config(function ($stateProvider, $urlRouterProvider, localStorageServiceProvider, $httpProvider) {
-
-            localStorageServiceProvider.setPrefix('ls');
+    angular.module('app', ['ui.router', 'ui.bootstrap', 'customDirectives', 'customFilters'])
+        .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
 
             /**
              * Default state
