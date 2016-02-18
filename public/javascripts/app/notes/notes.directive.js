@@ -6,9 +6,7 @@
         .directive('notesList', function () {
             return {
                 restrict: 'E',
-                scope: {
-                    items: '='
-                },
+                scope: false,
                 templateUrl: 'build/partials/app/notes/notes.html',
             };
         });
