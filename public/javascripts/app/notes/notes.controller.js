@@ -21,8 +21,9 @@
                 vm.newNote = '';
             };
 
-            vm.deleteNote = function ($event) {
-                console.log($event.currentTarget);
+            vm.deleteNote = function (note) {
+                var noteIndex = vm.notes.indexOf(note);
+                vm.notes.splice(noteIndex, 1);
             }
 
         });

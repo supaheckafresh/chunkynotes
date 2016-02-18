@@ -23,6 +23,7 @@
                 hide: function () {
                     this.hidden = true;
                 }
+
             };
 
             return Note;

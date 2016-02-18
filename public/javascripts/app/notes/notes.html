@@ -6,7 +6,7 @@
             <p class="date">{{ note.date | date }}</p>
             <span class="note-buttons">
                 <button type="button" class="btn btn-info" data-ng-click="note.hide()">Hide</button>
-                <button type="button" class="btn btn-danger" data-ng-click="note.delete()">Delete</button>
+                <button type="button" class="btn btn-danger" data-ng-click="notes.deleteNote(note)">Delete</button>
             </span>
 
         </li>
