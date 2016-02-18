@@ -1,4 +1,6 @@
 <div>
-    <p>{{ note.note.content }}</p>
-    <p>{{ note.note.date }}</p>
+    <div class="note">
+        <pre class="note-full">{{ note.note.content }}</pre>
+        <p class="date">{{ note.note.date | date }}</p>
+    </div>
 </div>

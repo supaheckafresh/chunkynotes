@@ -26,7 +26,7 @@
                 })
                 .state('app.note', {
                     url: '/:note_content',
-                    templateUrl: 'build/partials/app/note.html',
+                    templateUrl: 'build/partials/app/notes/note.html',
                     controller: 'NoteController',
                     controllerAs: 'note',
                     resolve: {
