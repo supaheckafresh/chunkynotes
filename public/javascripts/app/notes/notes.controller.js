@@ -11,8 +11,7 @@
             vm.newNote = '';
 
             vm.addNote = function () {
-                console.log(vm.newNote);
-
+                
                 var note = [{
                     content: vm.newNote.toString(),
                     date: Date.now()
