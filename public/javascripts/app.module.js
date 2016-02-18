@@ -7,31 +7,31 @@
             /**
              * Default state
              */
-            $urlRouterProvider.otherwise('/movies');
+            $urlRouterProvider.otherwise('/app');
 
             /**
              * State provider
              */
             $stateProvider
-                .state('movies', {
-                    url: '/movies',
-                    templateUrl: 'build/partials/movies/movies.html',
+                .state('app', {
+                    url: '/app',
+                    templateUrl: 'build/partials/notes/app.html',
                     controller: 'NotesController',
-                    controllerAs: 'movies',
+                    controllerAs: 'notes',
                     resolve: {
-                        movies: function (MoviesService) {
-                            return MoviesService.getMovies();
+                        notes: function (NotesService) {
+                            return NotesService.getNotes();
                         }
                     }
                 })
-                .state('movies.movie', {
-                    url: '/:movie_title',
-                    templateUrl: 'build/partials/movies/movie.html',
-                    controller: 'MovieController',
-                    controllerAs: 'movie',
+                .state('app.note', {
+                    url: '/:note_title',
+                    templateUrl: 'build/partials/notes/note.html',
+                    controller: 'NoteController',
+                    controllerAs: 'note',
                     resolve: {
-                        movie: function (movies, MoviesService, $stateParams) {
-                            return MoviesService.find($stateParams.movie_title);
+                        note: function (notes, NotesService, $stateParams) {
+                            return NotesService.find($stateParams.note_title);
                         }
                     }
                 });
