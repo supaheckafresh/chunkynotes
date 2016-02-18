@@ -7,9 +7,9 @@
             return {
                 restrict: 'E',
                 scope: {
-                    info: '='
+                    items: '='
                 },
-                templateUrl: 'build/partials/app/notes/notes.html'
+                templateUrl: 'build/partials/app/notes/notes.html',
             };
         });
 

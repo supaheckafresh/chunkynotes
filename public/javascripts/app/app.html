@@ -3,7 +3,21 @@
     <div class="row">
 
         <editor></editor>
-        <notes-list></notes-list>
+
+        <!-- TODO: I attempted to use a directive for the notes preview list but had difficulty figuring out how to
+        <!-- TODO (cont): access the notes data within that scope; I'd still like to implement this. -->
+        <!--<notes-list></notes-list>-->
+
+        <div class="notes-list col-xs-6">
+            <ul>
+                <li class="note" data-ng-repeat="note in notes.notes">
+                    <h4>{{ note.content }}</h4>
+                    <p class="date">{{ note.date }}</p>
+                    <button type="button" class="delete btn btn-danger">Delete</button>
+                </li>
+            </ul>
+        </div>
+
 
     </div>
 

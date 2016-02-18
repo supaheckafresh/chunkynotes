@@ -6,7 +6,7 @@
         .service('NotesService', function (Note, $http) {
             var vm = this;
 
-            var notes = [];
+            vm.notes = [];
 
             vm.makeNotes = function (data) {
                 _.each(data, function (l) {

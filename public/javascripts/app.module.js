@@ -15,7 +15,14 @@
             $stateProvider
                 .state('app', {
                     url: '/app',
-                    templateUrl: 'build/partials/app/app.html'
+                    templateUrl: 'build/partials/app/app.html',
+                    controller: 'NotesController',
+                    controllerAs: 'notes',
+                    resolve: {
+                        notes: function (NotesService) {
+                            return NotesService.getNotes();
+                        }
+                    }
                 })
                 .state('app.note', {
                     url: '/:note_title',
