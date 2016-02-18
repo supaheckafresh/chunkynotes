@@ -4,7 +4,11 @@
         <li class="note" data-ng-repeat="note in notes.notes" data-ng-hide="note.hidden">
             <div class="note-left-buttons">
                 <div><i class="edit-button fa fa-pencil-square fa-2x"></i></div>
-                <div><i class="view-button fa fa-eye fa-2x"></i></div>
+                <div>
+                    <a data-ui-sref="app.note ({ note_content: note.content })">
+                        <i class="view-button fa fa-eye fa-2x"></i>
+                    </a>
+                </div>
             </div>
             <p class="note-preview"><a data-ui-sref="app.note ({ note_content: note.content })">{{ note.preview() }}</a></p>
             <p class="date">{{ note.date | date }}</p>
