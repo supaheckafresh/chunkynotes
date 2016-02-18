@@ -2,8 +2,8 @@
 
     <ul>
         <li class="note" data-ng-repeat="note in notes.notes">
-            <h4>{{ note.content }}</h4>
-            <p class="date">{{ note.date }}</p>
+            <p>{{ note.preview() }}</p>
+            <p class="date">{{ note.date | date }}</p>
             <button type="button" class="delete btn btn-danger">Delete</button>
         </li>
     </ul>

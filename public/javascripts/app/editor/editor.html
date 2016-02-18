@@ -1,7 +1,9 @@
 <div class="editor col-xs-6">
-    <textarea rows="12"></textarea>
-    <form>
-        <input class="btn btn-success" type="button" value="Save">
-        <input class="btn btn-danger" type="button" value="Start Over">
+    <form role="form" name="noteForm" data-ng-submit="notes.addNote()">
+        <div class="input-group">
+            <textarea data-ng-model="notes.newNote" rows="12" class="form-control" required></textarea>
+            <input type="submit" class="btn btn-success" value="Save">
+            <input class="btn btn-danger" value="Start Over">
+        </div>
     </form>
 </div>

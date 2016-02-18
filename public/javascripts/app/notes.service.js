@@ -25,10 +25,6 @@
                     });
             };
 
-            vm.addNote = function (note) {
-                vm.notes.push(new Note(note));
-            };
-
         });
 
 }());

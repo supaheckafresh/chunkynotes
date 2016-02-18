@@ -6,9 +6,7 @@
         .directive('editor', function () {
             return {
                 restrict: 'E',
-                scope: {
-                    info: '='
-                },
+                scope: false,
                 templateUrl: 'build/partials/app/editor/editor.html'
             };
         });
