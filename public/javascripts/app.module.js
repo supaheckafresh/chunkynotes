@@ -34,7 +34,18 @@
                             return NotesService.find($stateParams.note_content);
                         }
                     }
-                });
+                })
+                .state('app.edit', {
+                    url: '/edit/:note_content',
+                    templateUrl: 'build/partials/app/editor/edit_mode.html',
+                    controller: 'NoteController',
+                    controllerAs: 'note',
+                    resolve: {
+                        note: function (notes, NotesService, $stateParams) {
+                            return NotesService.find($stateParams.note_content);
+                        }
+                    }
+                })
         });
 }());
 

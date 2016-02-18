@@ -9,7 +9,6 @@
                      content: '',
                      date: '',
                      hidden: false,
-                     editMode: false
                  }, data || {});
             }
 

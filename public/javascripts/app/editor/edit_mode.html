@@ -1,0 +1,14 @@
+
+<div class="edit-mode">
+    <form role="form" name="noteForm" data-ng-submit="note.saveChanges()">
+        <div class="input-group">
+            <textarea rows="11" data-ng-model="note.note.content" class="note-pad form-control" required></textarea>
+            <div class="note-buttons">
+                <a data-ui-sref="app">
+                    <input type="submit" class="btn btn-success" value="Save">
+                    <input class="btn btn-danger" value="Cancel">
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
