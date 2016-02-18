@@ -6,7 +6,8 @@
             <div class="note-buttons">
                 <a data-ui-sref="app">
                     <input type="submit" class="btn btn-success" value="Save">
-                    <input class="btn btn-danger" value="Cancel">
+                    <input class="btn btn-danger" value="Cancel"
+                           data-ng-click="note.note.content = note.note.cachedContent">
                 </a>
             </div>
         </div>

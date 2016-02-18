@@ -4,7 +4,9 @@
         <li class="note" data-ng-repeat="note in notes.notes" data-ng-hide="note.hidden">
             <div class="note-left-buttons">
                 <div>
-                    <a data-ui-sref="app.edit ({ note_content: note.content })">
+                    <a data-ng-click="note.cachedContent = note.content"
+                       data-ui-sref="app.edit ({ note_content: note.content })">
+
                         <i class="edit-button fa fa-pencil-square fa-2x"></i>
                     </a>
                 </div>
