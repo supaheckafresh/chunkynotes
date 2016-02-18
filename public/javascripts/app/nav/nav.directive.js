@@ -2,14 +2,14 @@
 
     'use strict';
 
-    angular.module('navMenu', [])
+    angular.module('customDirectives')
         .directive('navbar', function () {
             return {
                 restrict: 'E',
                 scope: {
                     info: '='
                 },
-                templateUrl: 'build/partials/navbar.html'
+                templateUrl: 'build/partials/app/nav/navbar.html'
             };
         });
 }());

@@ -2,7 +2,7 @@
 
     'use strict';
 
-    angular.module('app', ['ui.router', 'ui.bootstrap', 'customFilters', 'navMenu'])
+    angular.module('app', ['ui.router', 'ui.bootstrap', 'customDirectives', 'customFilters'])
         .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
             /**
              * Default state
@@ -15,18 +15,11 @@
             $stateProvider
                 .state('app', {
                     url: '/app',
-                    templateUrl: 'build/partials/notes/app.html',
-                    controller: 'NotesController',
-                    controllerAs: 'notes',
-                    resolve: {
-                        notes: function (NotesService) {
-                            return NotesService.getNotes();
-                        }
-                    }
+                    templateUrl: 'build/partials/app/app.html'
                 })
                 .state('app.note', {
                     url: '/:note_title',
-                    templateUrl: 'build/partials/notes/note.html',
+                    templateUrl: 'build/partials/app/note.html',
                     controller: 'NoteController',
                     controllerAs: 'note',
                     resolve: {
