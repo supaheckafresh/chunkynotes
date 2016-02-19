@@ -1,6 +1,6 @@
 
 <div class="edit-mode">
-    <form role="form" name="noteForm" data-ng-submit="">
+    <form role="form" name="noteForm">
         <div class="input-group">
 
             <!-- note that we are only using data binding to update (or discard) changes to `note.note.content`.
@@ -11,7 +11,8 @@
                 <a data-ui-sref="app" data-ng-show="note.note.content">
                     <input type="submit"
                            class="btn btn-success"
-                           value="Save">
+                           value="Save"
+                           data-ng-click="note.update()">
 
                     <input class="btn btn-danger" value="Cancel"
                            data-ng-click="note.note.content = note.note.cachedContent">
