@@ -19,13 +19,30 @@
             vm.saveNote = function (note) {
                 vm.notes.push(new Note(note));
                 vm.saveToLocalStorage();
+                if (vm.notes.length === 1) {
+                    return vm.notes;
+                }
             };
 
             vm.getNotes = function () {
                 if (localStorage.chunkynotes) {
                     vm.notes = JSON.parse(localStorage.chunkynotes);
                     return vm.makeNotes(vm.notes);
+
+                } else {
+                    vm.notes = vm.fakeNotes();
+                    return vm.notes;
                 }
+            };
+
+            vm.fakeNotes = function () {
+                return $http.get('build/data/fakenotes.json')
+                    .then(function (res) {
+                        return vm.makeNotes(res.data);
+                    }, function (err) {
+                        console.log(err);
+                        return 'Sorry, there has been an error processing fake notes JSON...';
+                    });
             };
 
             vm.saveToLocalStorage = function () {
