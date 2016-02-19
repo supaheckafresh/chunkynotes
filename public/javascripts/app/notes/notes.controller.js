@@ -12,11 +12,11 @@
 
             vm.addNote = function () {
 
-                var note = [{
+                var note = {
                     content: vm.newNote.toString(),
                     date: Date.now()
-                }];
-                NotesService.makeNotes(note);
+                };
+                NotesService.saveNote(note);
 
                 vm.newNote = '';
             };

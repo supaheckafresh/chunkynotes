@@ -1,7 +1,7 @@
 <div class="notes-list">
 
     <ul>
-        <li class="note" data-ng-repeat="note in notes.notes | orderBy: 'date':true" data-ng-hide="note.hidden">
+        <li class="note" data-ng-repeat="note in notes.notes | reverse track by note.date" data-ng-hide="note.hidden">
             <div class="note-left-buttons">
                 <div>
                     <a data-ng-click="note.cachedContent = note.content"
