@@ -29,9 +29,6 @@
             };
 
             vm.saveToLocalStorage = function () {
-
-                console.log(vm.notes);
-
                 localStorage.chunkynotes = JSON.stringify(vm.notes);
             };
 
