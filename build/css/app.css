@@ -1,0 +1,101 @@
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+  cursor: pointer;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background-color: #ebf6e9;
+}
+a {
+  color: inherit;
+}
+.large {
+  display: none;
+}
+.nav-area {
+  display: block;
+}
+.nav-area .app-title {
+  font-weight: bold;
+}
+.navbar-custom {
+  color: #e7c3c3;
+  background-color: #0077aa;
+  border: 2px solid #e7c3c3;
+}
+.note-pad {
+  font-family: 'Waiting for the Sunrise', cursive;
+  font-size: 24px;
+  border: none;
+  box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.3);
+  background-color: #e7d9b1;
+}
+.input-group {
+  width: 100%;
+}
+.list {
+  padding-left: 0;
+}
+.note {
+  position: relative;
+  list-style: none;
+  background-color: #ffe082;
+  border-radius: 4px;
+  border: 1px solid white;
+  padding: 6px 0 8px 8px;
+  margin-bottom: 16px;
+  box-shadow: 5px 5px 9px #888;
+}
+.note .note-preview {
+  font-family: 'Waiting for the Sunrise', cursive;
+  font-size: 18px;
+}
+.note .date {
+  font-weight: bold;
+}
+.note .note-left-buttons {
+  display: none;
+  position: absolute;
+  top: 4px;
+  left: -24px;
+}
+.note .note-left-buttons .edit-button {
+  color: #ffb700;
+}
+.note .note-left-buttons .view-button {
+  color: #0340ff;
+}
+.note .note-full {
+  font-family: 'Waiting for the Sunrise', cursive;
+  font-size: 24px;
+  background-color: #ffe082;
+  border: none;
+}
+.note:hover .note-left-buttons {
+  display: block;
+}
+ul li:nth-child(even) {
+  background-color: #dddddd;
+}
+ul li:nth-child(odd) {
+  background-color: #c7d4bf;
+}
+.date {
+  display: inline;
+}
+.note-buttons {
+  z-index: 999;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+@media screen and (min-width: 600px) {
+  .small {
+    display: none;
+  }
+  .large {
+    display: block;
+  }
+}

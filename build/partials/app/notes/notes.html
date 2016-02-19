@@ -1,0 +1,29 @@
+<div class="notes-list">
+
+    <ul>
+        <li class="note" data-ng-repeat="note in notes.notes | reverse track by note.date" data-ng-hide="note.hidden">
+            <div class="note-left-buttons">
+                <div>
+                    <a data-ng-click="note.cachedContent = note.content"
+                       data-ui-sref="app.edit ({ note_content: note.content })">
+
+                        <i class="edit-button fa fa-pencil-square fa-2x"></i>
+                    </a>
+                </div>
+                <div>
+                    <a data-ui-sref="app.note ({ note_content: note.content })">
+                        <i class="view-button fa fa-eye fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <p class="note-preview"><a data-ui-sref="app.note ({ note_content: note.content })">{{ note.preview() }}</a></p>
+            <p class="date">{{ note.date | date }}</p>
+            <span class="note-buttons">
+                <button type="button" class="btn btn-info" data-ng-click="note.hide()">Hide</button>
+                <button type="button" class="btn btn-danger" data-ng-click="notes.deleteNote(note)">Delete</button>
+            </span>
+
+        </li>
+    </ul>
+
+</div>
