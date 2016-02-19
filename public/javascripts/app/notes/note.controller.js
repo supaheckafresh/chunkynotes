@@ -9,6 +9,7 @@
 
             vm.update = function () {
                 vm.note.date = Date.now();
+                NotesService.setNewest(vm.note);
                 NotesService.saveToLocalStorage();
             }
         });

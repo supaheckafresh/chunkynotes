@@ -45,6 +45,13 @@
                     });
             };
 
+            vm.setNewest = function (note) {
+                var noteIndex = vm.notes.indexOf(note);
+                vm.notes.splice(noteIndex, 1);
+                vm.notes.push(note);
+                vm.saveToLocalStorage();
+            };
+
             vm.saveToLocalStorage = function () {
                 localStorage.chunkynotes = JSON.stringify(vm.notes);
             };
